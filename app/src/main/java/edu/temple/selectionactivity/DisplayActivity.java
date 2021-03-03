@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.Gravity;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -39,6 +40,7 @@ public class DisplayActivity extends AppCompatActivity {
         int pos = intent.getIntExtra("QBPOS", 0);
 
         qbName.setText(qb);
+        qbName.setGravity(Gravity.CENTER);
         qbImage.setImageResource(qbImageArray[pos]);
 
     }
