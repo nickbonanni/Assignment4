@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">SelectionActivity</string>
+    <string name="instructions">Select one of the items</string>
+    <string name="brady">Tom Brady</string>
+    <string name="brees">Drew Brees</string>
+    <string name="mahomes">Patrick Mahomes</string>
+    <string name="rodgers">Aaron Rodgers</string>
+    <string name="watson">Deshaun Watson</string>
+</resources>
