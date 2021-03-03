@@ -1,5 +1,7 @@
 <resources>
     <string name="app_name">SelectionActivity</string>
+    <string name="select">Select</string>
+    <string name="display">Display</string>
     <string name="instructions">Select one of the items</string>
     <string name="brady">Tom Brady</string>
     <string name="brees">Drew Brees</string>

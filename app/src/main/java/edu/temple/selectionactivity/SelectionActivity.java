@@ -20,6 +20,7 @@ public class SelectionActivity extends AppCompatActivity {
 
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        setTitle(R.string.select);
 
         spinner = (Spinner) findViewById(R.id.spinner);
 
