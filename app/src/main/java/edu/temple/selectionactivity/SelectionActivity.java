@@ -2,6 +2,7 @@ package edu.temple.selectionactivity;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
@@ -37,11 +38,23 @@ public class SelectionActivity extends AppCompatActivity {
 
         spinner.setAdapter(adapter);
 
+        Intent intent = new Intent(this, DisplayActivity.class);
+
         spinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
 
             @Override
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
-               // qbImage.setImageResource(qbImageArray[position]);
+
+                if (position > 0) {
+
+                    String qb = nameArray.get(position);
+                    intent.putExtra("QBNAME", qb);
+                    intent.putExtra("QBPOS", position);
+                    startActivity(intent);
+                    spinner.setSelection(0);
+
+                }
+
             }
 
             @Override
@@ -50,6 +63,5 @@ public class SelectionActivity extends AppCompatActivity {
             }
 
         });
-
     }
 }
