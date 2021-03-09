@@ -1,4 +1,4 @@
-package edu.temple.selectionactivity;
+package edu.temple.Assignment5;
 
 import android.content.Context;
 
@@ -21,6 +21,6 @@ public class ExampleInstrumentedTest {
     public void useAppContext() {
         // Context of the app under test.
         Context appContext = InstrumentationRegistry.getInstrumentation().getTargetContext();
-        assertEquals("edu.temple.selectionactivity", appContext.getPackageName());
+        assertEquals("edu.temple.Assignment5", appContext.getPackageName());
     }
 }

@@ -1,4 +1,4 @@
-package edu.temple.selectionactivity;
+package edu.temple.Assignment5;
 
 import androidx.appcompat.app.AppCompatActivity;
 
