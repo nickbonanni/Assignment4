@@ -3,10 +3,10 @@
     <string name="select">Select</string>
     <string name="display">Display</string>
     <string name="instructions">Select one of the items</string>
-    <string name="brady">Tom Brady</string>
-    <string name="brees">Drew Brees</string>
-    <string name="mahomes">Patrick Mahomes</string>
-    <string name="rodgers">Aaron Rodgers</string>
-    <string name="watson">Deshaun Watson</string>
+    <string name="brady">Brady</string>
+    <string name="brees">Brees</string>
+    <string name="mahomes">Mahomes</string>
+    <string name="rodgers">Rodgers</string>
+    <string name="watson">Watson</string>
     <string name="desc">QB Image</string>
 </resources>

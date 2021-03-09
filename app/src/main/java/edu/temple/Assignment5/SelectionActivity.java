@@ -6,13 +6,13 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
-import android.widget.Spinner;
+import android.widget.GridView;
 
 import java.util.ArrayList;
 
 public class SelectionActivity extends AppCompatActivity {
 
-    Spinner spinner;
+    GridView gridView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -21,47 +21,36 @@ public class SelectionActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         setTitle(R.string.select);
 
-        spinner = (Spinner) findViewById(R.id.spinner);
+        gridView = (GridView) findViewById(R.id.gridView);
+        gridView.setNumColumns(3);
 
         ArrayList<String> nameArray = new ArrayList<String>();
-        nameArray.add(getString(R.string.instructions));
         nameArray.add(getString(R.string.brady));
         nameArray.add(getString(R.string.brees));
         nameArray.add(getString(R.string.mahomes));
         nameArray.add(getString(R.string.rodgers));
         nameArray.add(getString(R.string.watson));
 
-        int[] qbImageArray = new int[]{R.drawable.transparent_square, R.drawable.brady, R.drawable.brees,
-                R.drawable.mahomes, R.drawable.rodgers, R.drawable.watson};
+        int[] qbImageArray = new int[]{R.drawable.brady, R.drawable.brees2,
+                R.drawable.mahomes, R.drawable.rodgers, R.drawable.watson2};
 
         QuarterbackAdapter adapter = new QuarterbackAdapter(this, nameArray, qbImageArray);
 
-        spinner.setAdapter(adapter);
+        gridView.setAdapter(adapter);
 
         Intent intent = new Intent(this, DisplayActivity.class);
 
-        spinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+        gridView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
 
             @Override
-            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+            public void onItemClick(AdapterView<?> parent, View v, int position, long id) {
 
-                if (position > 0) {
-
-                    String qb = nameArray.get(position);
-                    intent.putExtra("QBNAME", qb);
-                    intent.putExtra("QBPOS", position);
-                    startActivity(intent);
-                    spinner.setSelection(0);
-
-                }
+                String qb = nameArray.get(position);
+                intent.putExtra("QBNAME", qb);
+                intent.putExtra("QBPOS", position);
+                startActivity(intent);
 
             }
-
-            @Override
-            public void onNothingSelected(AdapterView<?> parent) {
-                // Do nothing. This should never happen.
-            }
-
         });
     }
 }
