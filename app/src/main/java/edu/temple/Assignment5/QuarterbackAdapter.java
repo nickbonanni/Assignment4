@@ -71,5 +71,4 @@ public class QuarterbackAdapter extends BaseAdapter {
         return relativeLayout;
 
     }
-
 }
