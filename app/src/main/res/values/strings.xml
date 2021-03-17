@@ -3,10 +3,14 @@
     <string name="select">Select</string>
     <string name="display">Display</string>
     <string name="instructions">Select one of the items</string>
-    <string name="brady">QB One</string>
-    <string name="brees">QB Two</string>
-    <string name="mahomes">QB Three</string>
-    <string name="rodgers">QB Four</string>
-    <string name="watson">QB Five</string>
+
+    <string-array name="quarterbacks">
+        <item>QB One</item>
+        <item>QB Two</item>
+        <item>QB Three</item>
+        <item>QB Four</item>
+        <item>QB Five</item>
+    </string-array>
+
     <string name="desc">QB Image</string>
 </resources>

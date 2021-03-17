@@ -9,30 +9,28 @@ import android.widget.ImageView;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
-import java.util.ArrayList;
-
 import static android.graphics.Color.WHITE;
 
 public class QuarterbackAdapter extends BaseAdapter {
 
     Context context;
-    ArrayList<String> names;
+    String[] quarterbacks;
     int[] images;
 
-    public QuarterbackAdapter(Context context, ArrayList<String> names, int[] images) {
+    public QuarterbackAdapter(Context context, String[] quarterbacks, int[] images) {
         this.context = context;
-        this.names = names;
+        this.quarterbacks = quarterbacks;
         this.images = images;
     }
 
     @Override
     public int getCount() {
-        return names.size();
+        return quarterbacks.length;
     }
 
     @Override
     public Object getItem(int position) {
-        return names.get(position);
+        return quarterbacks[position];
     }
 
     @Override
@@ -50,7 +48,7 @@ public class QuarterbackAdapter extends BaseAdapter {
         TextView qbTextView = new TextView(context);
         qbTextView.setTextSize(23);
         qbTextView.setTextColor(WHITE);
-        qbTextView.setText(names.get(position));
+        qbTextView.setText(quarterbacks[position]);
         qbTextView.setTypeface(null, Typeface.BOLD);
 
         // Initializing image

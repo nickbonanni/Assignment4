@@ -10,8 +10,6 @@ import android.widget.AdapterView;
 import android.widget.GridView;
 import android.widget.TextView;
 
-import java.util.ArrayList;
-
 public class SelectionActivity extends AppCompatActivity {
 
     GridView gridView;
@@ -30,17 +28,12 @@ public class SelectionActivity extends AppCompatActivity {
         textView = (TextView) findViewById(R.id.textInstructions);
         textView.setGravity(Gravity.CENTER);
 
-        ArrayList<String> nameArray = new ArrayList<String>();
-        nameArray.add(getString(R.string.brady));
-        nameArray.add(getString(R.string.brees));
-        nameArray.add(getString(R.string.mahomes));
-        nameArray.add(getString(R.string.rodgers));
-        nameArray.add(getString(R.string.watson));
+        String[] quarterbacks = getResources().getStringArray(R.array.quarterbacks);
 
         int[] qbImageArray = new int[]{R.drawable.brady, R.drawable.brees2,
                 R.drawable.mahomes, R.drawable.rodgers, R.drawable.watson2};
 
-        QuarterbackAdapter adapter = new QuarterbackAdapter(this, nameArray, qbImageArray);
+        QuarterbackAdapter adapter = new QuarterbackAdapter(this, quarterbacks, qbImageArray);
 
         gridView.setAdapter(adapter);
 
@@ -51,7 +44,7 @@ public class SelectionActivity extends AppCompatActivity {
             @Override
             public void onItemClick(AdapterView<?> parent, View v, int position, long id) {
 
-                String qb = nameArray.get(position);
+                String qb = quarterbacks[position];
                 intent.putExtra("QBNAME", qb);
                 intent.putExtra("QBPOS", position);
                 startActivity(intent);
