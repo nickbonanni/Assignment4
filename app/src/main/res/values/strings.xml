@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">SelectionActivity</string>
+    <string name="app_name" translatable="false">SelectionActivity</string>
     <string name="select">Select</string>
     <string name="display">Display</string>
     <string name="instructions">Select one of the items</string>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">SelectionActivity</string>
+    <string name="select">Sélectionner</string>
+    <string name="display">Afficher</string>
+    <string name="instructions">Sélectionnez lun des éléments</string>
+    <string name="brady">QB Une</string>
+    <string name="brees">QB Deux</string>
+    <string name="mahomes">QB Trois</string>
+    <string name="rodgers">QB Quatre</string>
+    <string name="watson">QB Cinq</string>
+    <string name="desc">QB Image</string>
+</resources>
