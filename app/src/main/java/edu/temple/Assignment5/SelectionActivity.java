@@ -4,15 +4,18 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.Gravity;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.GridView;
+import android.widget.TextView;
 
 import java.util.ArrayList;
 
 public class SelectionActivity extends AppCompatActivity {
 
     GridView gridView;
+    TextView textView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -23,6 +26,9 @@ public class SelectionActivity extends AppCompatActivity {
 
         gridView = (GridView) findViewById(R.id.gridView);
         gridView.setNumColumns(3);
+
+        textView = (TextView) findViewById(R.id.textInstructions);
+        textView.setGravity(Gravity.CENTER);
 
         ArrayList<String> nameArray = new ArrayList<String>();
         nameArray.add(getString(R.string.brady));

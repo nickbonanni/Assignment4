@@ -8,8 +8,6 @@ import android.view.Gravity;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import java.util.ArrayList;
-
 public class DisplayActivity extends AppCompatActivity {
 
     TextView qbName;
